@@ -6,5 +6,3 @@ Lily McMullen: My favorite species is a raccoon. They are a native species in No
 
 Names: Whitney Maxfield, 
 Species: My favorite species is a Red-tailed Hawk. Red-tails are among the largest hawks in North America, second to the Ferruginous Hawk. They have a wingspan that averages a little over four feet and females are typically much larger than males. Red-tails eyesight is 8 times better than a humans! They are very cool birds. 
-
-
