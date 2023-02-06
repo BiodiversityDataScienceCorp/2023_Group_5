@@ -1,8 +1,8 @@
 githubConnect<-function(){
   #edit github user parameters
-  email<-"lilymcmullen@arizona.edu"
-  user<-"lilymcmullen"
-  token<-"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"
+  email<-""
+  user<-""
+  token<-""
   
   #check for usethis package
   is_usethis_loaded<-require("usethis")
