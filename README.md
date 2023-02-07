@@ -6,3 +6,7 @@ Lily McMullen: My favorite species is a raccoon. They are a native species in No
 
 Names: Whitney Maxfield, 
 Species: My favorite species is a Red-tailed Hawk. Red-tails are among the largest hawks in North America, second to the Ferruginous Hawk. They have a wingspan that averages a little over four feet and females are typically much larger than males. Red-tails eyesight is 8 times better than a humans! They are very cool birds. 
+
+Name: Olivia Spagnuolo
+My favorite species is a barn owl! Barn owls hunt at night, swooping back and forth low to the ground, looking for prey. They swallow their prey whole and cough up pellets when they are done digesting. Once, I stayed next to a barn where a family of barn owls lived, and I heard them all night and saw them looking for prey. Barn owls generally live in cavities (trees, old barns, etc) near large open areas of land. 
+Source: https://www.allaboutbirds.org/guide/Barn_Owl/id 
