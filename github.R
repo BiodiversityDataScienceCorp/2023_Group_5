@@ -1,6 +1,6 @@
 githubConnect<-function(){
   #edit github user parameters
-  email<-""
+  email<-"@"
   user<-""
   token<-""
   
