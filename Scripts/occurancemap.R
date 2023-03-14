@@ -13,9 +13,14 @@ ymin <- min(clean.tortoise$latitude)
 ggplot()+
   geom_polygon(data=wrld, mapping=aes(x=long, y=lat, group=group), fill="grey89", color = "grey60")+
   geom_point(data=clean.tortoise, mapping=aes(x=longitude, y=latitude), show.legend=FALSE) +
-  labs(title = "Species Occurences of Gopherus Morafkai", x="Longitude", y="Latitude") +
+  labs(title = "Species Occurences of \nGopherus Morafkai", x="Longitude", y="Latitude") +
   coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin,ymax))+
   scale_size_area()+
   borders("state")
 
 #Our occurrence points are locations, using x and y coordinates, where there is evidence of an occurrence of our tortoise species.
+
+ggsave(filename = "occurancemap.jpg", 
+       plot = last_plot(), path = "output", 
+       width = 1200, height = 800,
+       units = "px")
