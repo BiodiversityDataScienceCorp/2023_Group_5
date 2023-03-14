@@ -1,16 +1,3 @@
-#packages
-
-install.packages("dismo")
-install.packages("maptools")
-install.packages("tidyverse")
-install.packages("rJava")
-install.packages("maps")
-
-library(dismo)
-library(maptools)
-library(tidyverse)
-library(rJava)
-library(maps)
 
 # get climate data 
 currentEnv <- clim # renaming from the last sdm because clim isn't very specific
@@ -65,6 +52,6 @@ ggplot() +
 
 #Live ggsave here:
 
-ggsave(filename="FuturePlotTortoise.jpg", plot=last_plot(),path="output", width=1600, height=800, units="px")
+ggsave(filename="futureSDM.jpg", plot=last_plot(),path="output", width=1600, height=800, units="px")
 
 

@@ -1,19 +1,7 @@
-install.packages("dismo")
-install.packages("maptools")
-install.packages("tidyverse")
-install.packages("rJava")
-install.packages("maps")
+###Obtaining and Formatting Occurence / Climate Data ### 
 
-library(dismo)
-library(maptools)
-library(tidyverse)
-library(rJava)
-library(maps)
-
-### Section 1: Obtaining and Formatting Occurence / Climate Data ### 
-
-# read occurrence data (stop to talk about camelCase)
-tortoiseDataNotCoords <- cleantortoise %>% dplyr::select(longitude,latitude)
+# read occurrence data
+tortoiseDataNotCoords <- clean.tortoise %>% dplyr::select(longitude,latitude)
 
 # convert to spatial points, necessary for modelling and mapping
 tortoiseDataSpatialPts <- SpatialPoints(tortoiseDataNotCoords, proj4string = CRS("+proj=longlat"))
@@ -34,7 +22,7 @@ plot(clim[[12]]) # show one env layer ( = annual percepitation) (sorry not using
 plot(tortoiseDataSpatialPts, add = TRUE) # looks good, we can see where our data is
 
 
-### Section 2: Adding Pseudo-Absence Points ### 
+### Adding Pseudo-Absence Points ### 
 # Create pseudo-absence points (making them up, using 'background' approach)
 # first we need a raster layer to make the points up on, just picking 1
 mask <- raster(clim[[1]]) # mask is the raster object that determines the area where we are generating pts
@@ -45,7 +33,7 @@ geographicExtent <- extent(x = tortoiseDataSpatialPts)
 # Random points for background (same number as our observed points we will use )
 
 #determine how zoomed in or out the map will be
-zoom <- 4
+zoom <- 1.5
 set.seed(45) # seed set so we get the same background points each time we run this code 
 backgroundPoints <- randomPoints(mask = mask, 
                                  n = nrow(tortoiseDataNotCoords), # n should be at least 1000 (even if your sp has fewer than 1000 pts)
@@ -74,7 +62,7 @@ tortoiseSDM <- dismo::maxent(x = presenceAbsenceEnvDf, ## env conditions
 )
 
 
-### Section 5: Plot the Model ###
+### Plot the Model ###
 # first we will make it smaller
 
 predictExtent <- zoom*geographicExtent # choose here what is reasonable for your pts (where you got background pts from)
@@ -113,6 +101,5 @@ ggplot() +
 #save plot to file
 #more on ggsave here: https://ggplot2.tidyverse.org/reference/ggsave.html
 
-#Live code ggsave here:
-ggsave(filename="CurrentPlotTortoise.jpg", plot=last_plot(),path="output", width=1600, height=800, units="px")
+ggsave(filename="currentSDM.jpg", plot=last_plot(),path="output", width=1600, height=800, units="px")
 
