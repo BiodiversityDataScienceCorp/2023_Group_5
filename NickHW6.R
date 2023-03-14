@@ -228,5 +228,6 @@ ggplot() +
 
 # Step 7: save your future model!
 ggsave(filename = "G.morafkai.futureSDM.jpg", plot=last_plot(),path="output", width=2000, height=900, units="px")
+#yeah
 
 
