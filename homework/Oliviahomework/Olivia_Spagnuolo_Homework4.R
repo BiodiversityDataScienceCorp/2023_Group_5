@@ -23,15 +23,15 @@ ggplot()+
   labs(title="Species occurences of G. morafkai", x="longitude", y="latitude")
 
 #Clean data - NA values and duplicates. And occurrence status present. There weren't any outliers. 
-cleantortoise<-tortoise%>%filter(latitude!="NA", longitude!="NA")%>% mutate(location=paste(latitude, longitude, dateIdentified, sep="/"))%>%
+clean.tortoise<-tortoise%>%filter(latitude!="NA", longitude!="NA")%>% mutate(location=paste(latitude, longitude, dateIdentified, sep="/"))%>%
   distinct(location, .keep_all=TRUE)%>%filter(occurrenceStatus=="PRESENT")
-cleantortoise
+clean.tortoise
 
 #Create min and max values for the map
-xmax <- max(cleantortoise$longitude)
-xmin <- min(cleantortoise$longitude)
-ymax<- max(cleantortoise$latitude)
-ymin<- min(cleantortoise$latitude)
+xmax <- max(clean.tortoise$longitude)
+xmin <- min(clean.tortoise$longitude)
+ymax<- max(clean.tortoise$latitude)
+ymin<- min(clean.tortoise$latitude)
 
 #make the map! 
 wrld<-ggplot2::map_data("world")
