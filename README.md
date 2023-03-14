@@ -10,7 +10,12 @@ Creating Species Occurence Maps and Species Distribution Models for Species Stat
 
 # Dependencies 
 The following R packages are required (these will be installed in each file where necessary):
-- *add these in the future* 
+ - dismo
+ - tidyverse
+ - rJava
+ - maps
+ - spocc
+
 
 # Structure 
 *add these in the future* 
