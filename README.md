@@ -24,3 +24,7 @@ The following R packages are required (these will be installed in each file wher
 All packages needed are loaded first in "dataaquisitioncleaning.R" meaning there is no need to re-run all packages within each script.
 
 **moving script from github to R**
+
+Forking Process: 
+https://docs.github.com/en/get-started/quickstart/fork-a-repo 
+ 
