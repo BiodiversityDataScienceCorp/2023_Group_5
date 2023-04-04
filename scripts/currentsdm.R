@@ -38,9 +38,9 @@ geographicExtent <- extent(x = tortoiseDataSpatialPts)
 zoom <- 1.5
 set.seed(45) # seed set so we get the same background points each time we run this code 
 backgroundPoints <- randomPoints(mask = mask, 
-                                 n = nrow(tortoiseDataNotCoords), # n should be at least 1000 (even if your sp has fewer than 1000 pts)
+                                 n = nrow(tortoiseDataNotCoords), #n needs to be at least 1000, which we have!
                                  ext = geographicExtent, 
-                                 extf = zoom, # draw a slightly larger area than where our sp was found (ask katy what is appropriate here)
+                                 extf = zoom,
                                  warn = 0) # don't complain about not having a coordinate reference system
 
 # add col names (can click and see right now they are x and y)
@@ -65,11 +65,10 @@ tortoiseSDM <- dismo::maxent(x = presenceAbsenceEnvDf, ## env conditions
 
 
 ### Plot the Model ###
-# first we will make it smaller
-
-predictExtent <- zoom*geographicExtent # choose here what is reasonable for your pts (where you got background pts from)
-geographicArea <- crop(clim, predictExtent, snap = "in") # 
+#adjust the size
+predictExtent <- zoom*geographicExtent 
 # crop clim to the extent of the map you want
+geographicArea <- crop(clim, predictExtent, snap = "in") # 
 
 tortoisePredictPlot <- raster::predict(tortoiseSDM, geographicArea) # predict the model to 
 
