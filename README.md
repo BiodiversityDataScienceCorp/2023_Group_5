@@ -1,4 +1,4 @@
-# Gopherus morafkai Species Status Assessment 
+# *Gopherus morafkai* Species Status Assessment 
 
 ## Overview 
 - Lily McMullen
@@ -6,7 +6,7 @@
 - Olivia Spagnuolo
 - Whitney Maxfield 
 
-Creating Species Occurence Maps and Species Distribution Models for Species Status Assessment of Gopherus morafkai 
+Creating Species Occurence Maps and Species Distribution Models for Species Status Assessment of *Gopherus morafkai* 
 
 # Dependencies 
 The following R packages are required (these will be installed in each file where necessary):
