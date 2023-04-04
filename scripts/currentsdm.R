@@ -32,7 +32,9 @@ geographicExtent <- extent(x = tortoiseDataSpatialPts)
 
 # Random points for background (same number as our observed points we will use )
 
-#determine how zoomed in or out the map will be
+#determine how zoomed in (low numbers) or out (higher numbers) the map will be. We recommend 1.5.
+  #set the zoom variable to 1.5 to zoom the map into Northern Mexico, California, Arizona. 
+  #the max zoom we recommend is 4 which will show the whole US and Mexico. 
 zoom <- 1.5
 set.seed(45) # seed set so we get the same background points each time we run this code 
 backgroundPoints <- randomPoints(mask = mask, 
