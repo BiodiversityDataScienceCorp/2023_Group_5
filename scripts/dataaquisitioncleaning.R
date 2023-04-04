@@ -23,7 +23,7 @@ tortoise <- tortoiseQuery$gbif$data$Gopherus_morafkai
 #Making new variable and removing where lat/long are NA:
 clean.tortoise <- tortoise %>%
   filter(latitude != "NA", longitude != "NA") %>%
- #still w/ same variable, making the a column as function of other ones,
+ #still w/ same variable, making a new column as function of other ones,
  #removing duplicates, and making sure all occurrence points are the "present" ones
   mutate(location = paste(latitude, longitude, dateIdentified, sep = "/")) %>%
   distinct(location, .keep_all = TRUE) %>%
