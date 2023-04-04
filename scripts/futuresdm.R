@@ -3,7 +3,11 @@
 currentEnv <- clim # renaming from the last sdm because clim isn't very specific
 
 #to set our specific future data
-#Can adjust the year to either 70 or 50 depending on how many years in the future you want to look.  
+
+#Can adjust the year by changing the "year" value, depending on how many years in the future you want to look.
+#Ours is year = 50, for 50 years into the future.
+#Can adjust the "rcp" value, depending on how you want to set your future climate predictions.
+#Ours is rcp = 45, which is a middle of the road value. You could raise this value for a more extreme climate prediction, or lower it for a less extreme prediction.
 futureEnv <- raster::getData(name = 'CMIP5', var = 'bio', res = 2.5,
                              rcp = 45, model = 'IP', year = 50, path="data") 
 
@@ -44,7 +48,7 @@ ggplot() +
   scale_size_area() +
   borders("world") +
   borders("state") +
-  labs(title = "SDM of G. Morafkai Under CMIP 5 Climate Conditions",
+  labs(title = "SDM of G. Morafkai\nUnder CMIP 5\nClimate Conditions",
        x = "longitude",
        y = "latitude",
        fill = "Env Suitability") +
