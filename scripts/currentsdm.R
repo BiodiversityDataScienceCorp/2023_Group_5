@@ -89,7 +89,7 @@ ggplot() +
   coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = F) + # expand = F fixes weird margin
   scale_size_area() +
   borders("state") +
-  labs(title = "SDM of G. morafkai\n Under Current Climate \nConditions",
+  labs(title = "SDM of G. morafkai\nUnder Current Climate\nConditions",
        x = "longitude",
        y = "latitude",
        fill = "Environmental \nSuitability") +# \n is a line break
