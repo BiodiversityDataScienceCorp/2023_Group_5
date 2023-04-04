@@ -24,7 +24,7 @@ ggplot()+
   labs(title = "species occurences", x="longitude", y="latitude")
 
 
-cleanTortoise2 <- Gopherus %>% 
+cleanTortoise <- Gopherus %>% 
   filter(longitude <= 0) %>% 
   filter(latitude != "NA", longitude != "NA") %>% 
   filter(occurrenceStatus == "PRESENT") %>%
@@ -33,10 +33,10 @@ cleanTortoise2 <- Gopherus %>%
 #only filtered NAs and duplicates because map didn't show any extreme outliers, 
 #all occurrences were located in southern US and Mexico.  
 
-xmax <- max(noDuplicates$longitude)
-xmin <- min(noDuplicates$longitude)
-ymax <- max(noDuplicates$latitude)
-ymin <- min(noDuplicates$latitude)
+xmax <- max(cleanTortoise$longitude)
+xmin <- min(cleanTortoise$longitude)
+ymax <- max(cleanTortoise$latitude)
+ymin <- min(cleanTortoise$latitude)
 
 ggplot()+
   geom_polygon(data=wrld, mapping=aes(x=long, y=lat, group=group), fill="burlywood1", color = "grey9")+
@@ -52,7 +52,7 @@ range(as.Date(na.omit(cleanTortoise$dateIdentified)))
 #meaning there was evidence that the species was located in that specific area. 
 
 #attempting to add state names 
-state.abb
+
 
 ggplot()+
   geom_polygon(data=wrld, mapping=aes(x=long, y=lat, group=group), fill="burlywood1", color = "grey9")+
