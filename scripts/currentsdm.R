@@ -18,10 +18,6 @@ climList <- list.files(path = "data/wc2-5/", pattern = ".bil$",
 # stacking the bioclim variables to process them at one go
 clim <- raster::stack(climList)
 
-plot(clim[[12]]) # show one env layer ( = annual percepitation) (sorry not using ggplot here just for speed)
-plot(tortoiseDataSpatialPts, add = TRUE) # looks good, we can see where our data is
-
-
 ### Adding Pseudo-Absence Points ### 
 # Create pseudo-absence points (making them up, using 'background' approach)
 # first we need a raster layer to make the points up on, just picking 1

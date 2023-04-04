@@ -3,8 +3,9 @@
 currentEnv <- clim # renaming from the last sdm because clim isn't very specific
 
 #to set our specific future data
+#Can adjust the year to either 70 or 50 depending on how many years in the future you want to look.  
 futureEnv <- raster::getData(name = 'CMIP5', var = 'bio', res = 2.5,
-                             rcp = 45, model = 'IP', year = 70, path="data") 
+                             rcp = 45, model = 'IP', year = 50, path="data") 
 
 names(futureEnv) = names(currentEnv)
 # look at current vs future climate vars
