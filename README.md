@@ -22,6 +22,18 @@ The following R packages are required:
 
 # Structure
 
+**How to put our code into your R studio**
+You can either use an R desktop program in which case we recommend you download our project. 
+Or, if you are using the online platform posit.cloud, you can follow these steps: 
+1. Go to our main GitHub page https://github.com/BiodiversityDataScienceCorp/2023_Group_5
+2. Click the green code button. 
+3. Copy the URL under HTTPS. 
+4. In your posit.cloud workspace, click "New Project", which will bring you to a drop down menu. 
+5. Click "New project from Git Repository"
+6. Paste the link you copied and click "Ok". 
+7. You will now have our project in your R workspace and can edit it freely. 
+
+
 *note:*increase Ram within R to at least 5 before running
 
 **Within scripts:** 
