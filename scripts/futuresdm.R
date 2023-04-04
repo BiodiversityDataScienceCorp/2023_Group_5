@@ -38,7 +38,7 @@ ggplot() +
   geom_polygon(data = wrld, mapping = aes(x = long, y = lat, group = group),
                fill = "grey75") +
   geom_raster(data = tortoisePredictDfFutureC5, aes(x = x, y = y, fill = layer)) + 
-  scale_fill_gradientn(colors = terrain.colors(10, rev = T)) +
+  scale_fill_gradientn(colors = terrain.colors(10, rev = T), limits = c(0,1)) +
   coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = F) +
   scale_size_area() +
   borders("world") +

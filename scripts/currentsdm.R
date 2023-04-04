@@ -88,14 +88,14 @@ ggplot() +
   geom_polygon(data = wrld, mapping = aes(x = long, y = lat, group = group),
                fill = "grey75") +
   geom_raster(data = tortoisePredictDf, aes(x = x, y = y, fill = layer)) + 
-  scale_fill_gradientn(colors = terrain.colors(10, rev = T)) +
+  scale_fill_gradientn(colors = terrain.colors(10, rev = T), limits = c(0,1)) +
   coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax), expand = F) + # expand = F fixes weird margin
   scale_size_area() +
   borders("state") +
-  labs(title = "SDM of G. morafkai Under Current Climate Conditions",
+  labs(title = "SDM of G. morafkai\n Under Current Climate \nConditions",
        x = "longitude",
        y = "latitude",
-       fill = "Environmental \nSuitability") + # \n is a line break
+       fill = "Environmental \nSuitability") +# \n is a line break
   theme(legend.box.background=element_rect(),legend.box.margin=margin(5,5,5,5)) 
 
 #save plot to file
