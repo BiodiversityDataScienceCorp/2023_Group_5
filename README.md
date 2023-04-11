@@ -9,7 +9,7 @@
 -   Olivia Spagnuolo
 -   Whitney Maxfield
 
-Creating Species Occurence Maps and Species Distribution Models for Species Status Assessment of *Gopherus morafkai*
+Creating Species Occurrence Maps and Species Distribution Models for Species Status Assessment of *Gopherus morafkai*
 
 *Data accessed 4/4/2023*
 
@@ -24,7 +24,8 @@ The following R packages are required:
 
 # Structure
 
-**How to put our code into your R studio**
+**How to put our code into your R studio:**
+
 You can either use an R desktop program in which case we recommend you download our project. 
 Or, if you are using the online platform posit.cloud, you can follow these steps: 
 1. Go to our main GitHub page https://github.com/BiodiversityDataScienceCorp/2023_Group_5
@@ -36,11 +37,11 @@ Or, if you are using the online platform posit.cloud, you can follow these steps
 7. You will now have our project in your R workspace and can edit it freely. 
 
 
-*note:*increase Ram within R to at least 5 before running
+*note* increase Ram within R to at least 5 before running
 
 **Within scripts:** 
 1. run script titled "dataaquisitioncleaning.R" 
-2. run script titled "occurancemap.R" 
+2. run script titled "occurrencemap.R" 
 3. run script titled "currentsdm.R" 
 4. run script titled "futuresdm.R"
 
