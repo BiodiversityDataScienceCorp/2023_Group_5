@@ -13,7 +13,14 @@ Creating Species Occurrence Maps and Species Distribution Models for Species Sta
 
 *Data accessed 4/4/2023*
 
-# Dependencies
+## Data 
+
+- wc2-5: climate data from WorldClim
+- cmip5: forecast climate data from WorldClim. The data are for varying years in the future. Data is based on the IPSL-CM5A-LR model with an RCP of 4.5 CO2. 
+- GBIF: Biodiversity data 
+
+
+## Dependencies
 
 The following R packages are required: 
 - dismo 
@@ -22,7 +29,7 @@ The following R packages are required:
 - maps 
 - spocc
 
-# Structure
+## Structure
 
 **How to put our code into your R studio:**
 
