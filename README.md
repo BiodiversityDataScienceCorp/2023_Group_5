@@ -9,7 +9,7 @@
 -   Olivia Spagnuolo
 -   Whitney Maxfield
 
-Creating Species Occurence Maps and Species Distribution Models for Species Status Assessment of *Gopherus morafkai*
+Creating Species Occurrence Maps and Species Distribution Models for Species Status Assessment of *Gopherus morafkai*
 
 *Data accessed 4/4/2023*
 
@@ -40,7 +40,7 @@ Or, if you are using the online platform posit.cloud, you can follow these steps
 
 **Within scripts:** 
 1. run script titled "dataaquisitioncleaning.R" 
-2. run script titled "occurancemap.R" 
+2. run script titled "occurrancemap.R" 
 3. run script titled "currentsdm.R" 
 4. run script titled "futuresdm.R"
 
