@@ -15,8 +15,8 @@ Creating Species Occurrence Maps and Species Distribution Models for Species Sta
 
 ## Data 
 
-- wc2-5: climate data from WorldClim
-- cmip5: forecast climate data from WorldClim. The data are for varying years in the future. Data is based on the IPSL-CM5A-LR model with an RCP of 4.5 CO2. 
+- wc2-5: climate data from [WorldClim](https://www.worldclim.org/).
+- cmip5: forecast climate data from [WorldClim](https://www.worldclim.org/).The data are for varying years in the future. Data is based on the  [IPSL-CM5A-LR](https://cmc.ipsl.fr/international-projects/cmip5/). model with an RCP of 4.5 CO2. 
 - GBIF: Biodiversity data 
 
 
