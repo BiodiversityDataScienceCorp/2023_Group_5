@@ -53,7 +53,7 @@ ggplot() +
   theme(legend.box.background=element_rect(),legend.box.margin=margin(5,5,5,5)) 
 
 
-# Save the final plot using ggsave:
+# Save the final plot using ggsave
 ggsave(filename="futureSDM.jpg", plot=last_plot(),path="output", width=1600, height=800, units="px")
 
 
