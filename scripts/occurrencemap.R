@@ -22,7 +22,7 @@ ggplot()+
 # ...where there is evidence of an occurrence of our tortoise species.
 
 #Save the map into the outputs file with ggsave method:
-ggsave(filename = "occurencemap.jpg", 
+ggsave(filename = "occurrencemap.jpg", 
        plot = last_plot(), path = "output", 
        width = 1200, height = 800,
        units = "px")
