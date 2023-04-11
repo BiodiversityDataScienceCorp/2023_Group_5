@@ -18,9 +18,11 @@ ggplot()+
   scale_size_area()+
   borders("state")
 
-#Our occurrence points are locations, using x and y coordinates, where there is evidence of an occurrence of our tortoise species.
+#Our occurrence points are locations, using x and y coordinates, 
+# ...where there is evidence of an occurrence of our tortoise species.
 
-ggsave(filename = "occurancemap.jpg", 
+#Save the map into the outputs file with ggsave method:
+ggsave(filename = "occurencemap.jpg", 
        plot = last_plot(), path = "output", 
        width = 1200, height = 800,
        units = "px")
