@@ -5,14 +5,14 @@ currentEnv <- clim # renaming from the last sdm because "clim" isn't very specif
 # to set our specific future data...
 # Can adjust the year by changing the "year" value, depending on how many years in the future you want to look. 
 # The options are 50 or 70.
-# Ours is year = 50, for 50 years into the future.
+# Ours is year = 50, for 50 years into the future
 # Can adjust the "rcp" value, depending on how you want to set your future climate predictions.
 # Ours is rcp = 45, which is a middle-of-the-road value. You could raise this value for a more... 
 #... extreme climate prediction, or lower it for a less extreme prediction.
 # Make query for the future data and make it a raster
 futureEnv <- raster::getData(name = 'CMIP5', var = 'bio', res = 2.5,
                              rcp = 45, model = 'IP', year = 50, path="data") 
-# make future columnn names same as current ones
+# make future data columnn names same as current ones
 names(futureEnv) = names(currentEnv)
 
 # crop clim to the extent of the map you want
