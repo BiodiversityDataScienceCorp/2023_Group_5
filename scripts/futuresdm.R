@@ -1,5 +1,5 @@
 
-# get climate data 
+# get climate data
 currentEnv <- clim # renaming from the last sdm because "clim" isn't very specific
 
 # to set our specific future data...
