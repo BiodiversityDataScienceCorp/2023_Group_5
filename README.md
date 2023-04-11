@@ -11,12 +11,12 @@
 
 Creating Species Occurrence Maps and Species Distribution Models for Species Status Assessment of *Gopherus morafkai*
 
-*Data accessed 4/4/2023*
+*Data accessed 4/11/2023*
 
 ## Data 
 
-- wc2-5: climate data from [WorldClim](https://www.worldclim.org/).
-- cmip5: forecast climate data from [WorldClim](https://www.worldclim.org/).The data are for varying years in the future. Data is based on the  [IPSL-CM5A-LR](https://cmc.ipsl.fr/international-projects/cmip5/). model with an RCP of 4.5 CO2. 
+- wc2-5: Climate data from [WorldClim](https://www.worldclim.org/).
+- cmip5: Forecast climate data from [WorldClim](https://www.worldclim.org/).The data are for varying years in the future. Data is based on the  [IPSL-CM5A-LR](https://cmc.ipsl.fr/international-projects/cmip5/). model with an RCP of 4.5 CO2. 
 - GBIF: Biodiversity data 
 
 
