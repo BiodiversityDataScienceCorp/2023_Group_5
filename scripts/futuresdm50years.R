@@ -57,6 +57,6 @@ ggplot() +
 
 #Live ggsave here:
 
-ggsave(filename="futureSDM.jpg", plot=last_plot(),path="output", width=1600, height=800, units="px")
+ggsave(filename="futureSDM50years.jpg", plot=last_plot(),path="output", width=1600, height=800, units="px")
 
 
