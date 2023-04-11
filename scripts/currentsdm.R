@@ -1,4 +1,4 @@
-###Obtaining and Formatting Occurence / Climate Data ### 
+###Obtaining and Formatting Occurrence / Climate Data ### 
 
 # read occurrence data
 tortoiseDataNotCoords <- clean.tortoise %>% dplyr::select(longitude,latitude)
@@ -15,18 +15,18 @@ currentEnv <- getData("worldclim", var="bio", res=2.5, path="data/") # current d
 climList <- list.files(path = "data/wc2-5/", pattern = ".bil$", 
                        full.names = T)  # '..' leads to the path above the folder where the .rmd file is located
 
-# stacking the bioclim variables to process them at one go
+# stack the bioclim variables to process them at one go
 clim <- raster::stack(climList)
 
 ### Adding Pseudo-Absence Points ### 
 # Create pseudo-absence points (making them up, using 'background' approach)
-# first we need a raster layer to make the points up on, just picking 1
+# first we need a raster layer to make the points up on, just picking 1 arbitrarily
 mask <- raster(clim[[1]]) # mask is the raster object that determines the area where we are generating pts
 
 # determine geographic extent of our data (so we generate random points reasonably nearby)
 geographicExtent <- extent(x = tortoiseDataSpatialPts)
 
-# Random points for background (same number as our observed points we will use )
+# Make random points for background (same number as our observed points we will use )
 
 #determine how zoomed in (low numbers) or out (higher numbers) the map will be. We recommend 1.5.
   #set the zoom variable to 1.5 to zoom the map into Northern Mexico, California, Arizona. 
@@ -39,10 +39,10 @@ backgroundPoints <- randomPoints(mask = mask,
                                  extf = zoom,
                                  warn = 0) # don't complain about not having a coordinate reference system
 
-# add col names (can click and see right now they are x and y)
+# add column names (can click and see right now they are x and y)
 colnames(backgroundPoints) <- c("longitude", "latitude")
 
-### Section 3: Collate Env Data and Point Data into Proper Model Formats ### 
+### Section 3: Collate Environmental Data and Point Data into Proper Model Formats ### 
 # Data for observation sites (presence and background), with climate data
 occEnv <- na.omit(raster::extract(x = clim, y = tortoiseDataNotCoords))
 absenceEnv<- na.omit(raster::extract(x = clim, y = backgroundPoints))
@@ -61,18 +61,19 @@ tortoiseSDM <- dismo::maxent(x = presenceAbsenceEnvDf, ## env conditions
 
 
 ### Plot the Model ###
-#adjust the size
+#adjust the size (extent) of the model
 predictExtent <- zoom*geographicExtent 
 # crop clim to the extent of the map you want
 geographicArea <- crop(clim, predictExtent, snap = "in") # 
 
-tortoisePredictPlot <- raster::predict(tortoiseSDM, geographicArea) # predict the model to 
+# Make the predictive raster model over that area 
+tortoisePredictPlot <- raster::predict(tortoiseSDM, geographicArea) 
 
 # for ggplot, we need the prediction to be a data frame 
 raster.spdf <- as(tortoisePredictPlot, "SpatialPixelsDataFrame")
 tortoisePredictDf <- as.data.frame(raster.spdf)
 
-# plot in ggplot
+# plot the model in ggplot
 wrld <- ggplot2::map_data("world")
 
 xmax <- max(tortoisePredictDf$x)
@@ -95,8 +96,8 @@ ggplot() +
        fill = "Environmental \nSuitability") +# \n is a line break
   theme(legend.box.background=element_rect(),legend.box.margin=margin(5,5,5,5)) 
 
-#save plot to file
-#more on ggsave here: https://ggplot2.tidyverse.org/reference/ggsave.html
+#save plot to file using ggsave
+#(more on ggsave here: https://ggplot2.tidyverse.org/reference/ggsave.html )
 
 ggsave(filename="currentSDM.jpg", plot=last_plot(),path="output", width=1600, height=800, units="px")
 
