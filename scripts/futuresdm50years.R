@@ -48,7 +48,7 @@ ggplot() +
   scale_size_area() +
   borders("world") +
   borders("state") +
-  labs(title = "SDM of G. Morafkai\nUnder CMIP 5\nClimate Conditions, \n50 years",
+  labs(title = "SDM of G. Morafkai\nUnder RCP 4.5\nClimate Conditions, \n50 years",
        x = "longitude",
        y = "latitude",
        fill = "Env Suitability") +
