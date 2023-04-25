@@ -47,6 +47,7 @@ Or, if you are using the online platform posit.cloud, you can follow these steps
 *note* increase Ram within R to at least 5 before running
 
 **Within scripts:** 
+
 1. run script titled "dataaquisitioncleaning.R" 
 2. run script titled "occurrencemap.R" 
 3. run script titled "currentsdm.R" 
@@ -57,3 +58,6 @@ All packages needed are loaded first in "dataaquisitioncleaning.R" meaning there
 **moving script from github to R**
 
 Forking Process: <https://docs.github.com/en/get-started/quickstart/fork-a-repo>
+
+We would like to note that this project is constrained by maxent's modeling capabilities as well as the climate data we used which was primarily based on temperature and precipitation. We think that the map may have been overfitted, perhaps due to spatial bias. 
+Since our tortoise requires a very specific habitat, it is hard to know exactly where it will be able to live based only on the climate features we have modeled. 
