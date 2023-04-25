@@ -59,5 +59,13 @@ All packages needed are loaded first in "dataaquisitioncleaning.R" meaning there
 
 Forking Process: <https://docs.github.com/en/get-started/quickstart/fork-a-repo>
 
-We would like to note that this project is constrained by maxent's modeling capabilities as well as the climate data we used which was primarily based on temperature and precipitation. We think that the map may have been overfitted, perhaps due to spatial bias. 
+We would like to note that this project is constrained by maxent's modeling capabilities as well as the climate data we used which was primarily based on temperature and precipitation.
 Since our tortoise requires a very specific habitat, it is hard to know exactly where it will be able to live based only on the climate features we have modeled. 
+There are two likely reasons for these constraints: overfitting and temporal issues. 
+
+We may have overfitting, or auto-correlation issues due to spatial sampling and the importance/weight of our covariants. 
+Overfitting may come from the way our creatures are observed in space (i.e. the same creature observed twice). To fix this we could try buffering or blocking. 
+
+Additionally, we may temporal issues. That is, we have a large shift when we change from current to future climate, so we may need to weigh the covariants (temperature and precipitation) differently than the current equal weighting. 
+
+We would recommend using cross-validation to help fix environmental covariant issues and determining the weight of the variables. 
