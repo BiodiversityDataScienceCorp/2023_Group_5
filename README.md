@@ -71,3 +71,6 @@ Overfitting may come from the way our creatures are observed in space (i.e. the 
 Additionally, we may temporal issues. That is, we have a large shift when we change from current to future climate, so we may need to weigh the covariants (temperature and precipitation) differently than the current equal weighting. 
 
 We would recommend using cross-validation to help fix environmental covariant issues and determining the weight of the variables. 
+
+[![DOI](https://zenodo.org/badge/595765967.svg)](https://zenodo.org/badge/latestdoi/595765967)
+
