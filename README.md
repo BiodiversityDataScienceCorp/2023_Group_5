@@ -55,9 +55,11 @@ Or, if you are using the online platform posit.cloud, you can follow these steps
 
 All packages needed are loaded first in "dataaquisitioncleaning.R" meaning there is no need to re-run all packages within each script.
 
-**moving script from github to R**
+**Moving script from github to R**
 
 Forking Process: <https://docs.github.com/en/get-started/quickstart/fork-a-repo>
+
+**Limitations to our modeling**
 
 We would like to note that this project is constrained by maxent's modeling capabilities as well as the climate data we used which was primarily based on temperature and precipitation.
 Since our tortoise requires a very specific habitat, it is hard to know exactly where it will be able to live based only on the climate features we have modeled. 
